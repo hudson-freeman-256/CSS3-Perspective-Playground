@@ -14,6 +14,22 @@
                 this.rotateX = 0;
                 this.rotateY = 0;
                 this.rotateZ = 0;
+            },
+            copy(){
+
+                const el = document.createElement('textarea')
+                el.value = `transform: ${this.box.transform}`
+                
+el.setAttribute('readonly','')
+el.style.left = "-9999px"
+
+ 
+               
+                document.body.appendChild(el)
+
+                el.select()
+                document.execCommand('copy')
+                document.body.removeChild(el)
             }
     },
     computed:{
